@@ -20,6 +20,8 @@ jobs:
           submodules: true
       - name: Build And Deploy
         id: builddeploy
+        env:
+          ENABLE_PREVIEW_FEATURES: true
         uses: vivekjilla/staticstiesactionoryx@master
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_NICE_GLACIER_0E9222B12 }}
